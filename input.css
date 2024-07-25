@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(5, 5, 42);
+    color: white;
+}
+
+header nav {
+    background-color: #010048;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1 {
+    font-size: 40px; /* Reduced font size for better responsiveness */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Limit the width for better responsiveness */
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    font-size: 20px; /* Adjusted for responsiveness */
+    padding: 10px; /* Adjusted for responsiveness */
+    border-radius: 10px;
+}
+
+form button[type="submit"] {
+    background-color: rgb(23, 214, 198);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 20px; /* Adjusted for responsiveness */
+    padding: 10px; /* Adjusted for responsiveness */
+    border-radius: 10px;
+}
+
+form button[type="submit"]:hover {
+    background-color: rgb(164, 228, 223);
+}
+
+p {
+    text-align: center;
+    font-size: 24px; /* Adjusted for responsiveness */
+}
+
+.recipecontainer {
+    background-color: #010048;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Adjusted for responsiveness */
+    width: 90%; /* Adjusted for responsiveness */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.recipe {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+}
+
+.recipe img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.recipe button {
+    background-color: rgb(240, 11, 99);
+    font-size: 20px; /* Adjusted for responsiveness */
+    font-style: italic;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px; /* Added padding for better look */
+}
+
+
+.recipe button:hover {
+    background-color: rgb(239, 194, 212);
+    transition: ease-in-out 0.3s;
+}
+
+.recipe:hover {
+    transform: scale(1.05); /* Scale up the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.recipe-close-btn {
+    font-size: 40px; /* Adjusted size */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.recipe-close-btn i {
+    font-size: inherit; /* Ensure icon inherits size */
+}
+
+.recipe-details {
+    background-color: crimson;
+    font-size: 24px; /* Adjusted for responsiveness */
+    font-style: normal;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    width: 90%; /* Adjusted for responsiveness */
+    height: 60%;
+    overflow-y: scroll;
+    padding: 20px; /* Added padding */
+}
+
+.recipe-details-content {
+    font-size: 20px; /* Adjusted for responsiveness */
+    padding: 20px;
+}
+
+.recipe-details::-webkit-scrollbar {
+    width: 10px; /* Adjusted for responsiveness */
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav h1 {
+        font-size: 24px; /* Further reduced for very small screens */
+    }
+
+    header nav form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    form input[type="text"], form button[type="submit"] {
+        font-size: 16px; /* Adjusted for very small screens */
+        padding: 10px; /* Adjusted for very small screens */
+    }
+
+    .recipecontainer {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        gap: 10px; /* Reduced gap for small screens */
+    }
+
+    .recipe {
+        padding: 10px; /* Reduced padding for small screens */
+    }
+
+    .recipe button {
+        font-size: 16px; /* Reduced font size for small screens */
+        padding: 5px; /* Reduced padding for small screens */
+    }
+}
+@media screen and (min-width:1024px){
+    .recipecontainer
+    {
+        width:100%
+    }
+    
+}
